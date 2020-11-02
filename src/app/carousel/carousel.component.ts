@@ -20,12 +20,12 @@ export class CarouselComponent{
     this.carousel()
   }
 
-  async carousel(){
-   this.photos.forEach((element,i) => {
+  carousel(){
+   this.photos.forEach((element,i) => {    
     setTimeout(() => {
       this.photoSrc = element;
-    }, i * 1*1000);       
-   });
+    }, i * 1*5000);      
+   });     
   }
     
     
