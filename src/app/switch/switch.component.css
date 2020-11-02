@@ -1,0 +1,17 @@
+.button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    background-color: #66cf91 ;
+    padding: 1em;
+    border-radius: 50px ;
+    padding: 0.5em;
+}
+
+label{    
+      width: 35px;
+      height: 35px;
+      background-color: #778899;
+      border-radius: 100%;      
+}
