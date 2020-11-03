@@ -6,26 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./switch.component.css']
 })
 export class SwitchComponent {
+  text: "oui" | "non" = "oui";
+  isOff: boolean = false;
+  marginLeft: string = "0";
+  left: string = "62px";
 
-  status:boolean = true ;
-  textStatus:string = "ON"
-  backgroundColor:string = "#66cf91" ;
-
-  constructor() { }
-
-  changeStatus() {
-    this.status = !this.status ;
-
-    if(this.status){
-      
-      this.backgroundColor = "#66cf91" ;
-      this.textStatus = "ON" ;
-      console.log("valeur 1");
+  onClick() {
+    if (this.isOff = this.text === "oui") {
+      this.text = "non";
+      this.marginLeft = "46px";
+      this.left = "2px";
+    } else {
+      this.text = "oui";
+      this.marginLeft = "0";
+      this.left = "62px";
     }
-    else{
-      this.backgroundColor = "#D3D3D3" ;
-      this.textStatus = "OFF" ;
-      console.log("valeur 0");
-    }
+    console.log(this.text);
   }
 }

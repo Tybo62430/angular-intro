@@ -1,37 +1,34 @@
 import { Component } from '@angular/core';
 
+const FRUITS_DIR: string = "assets/images/fruits/";
+const SPEED: number = 2000; // milliseconds
+
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css']
 })
-export class CarouselComponent{
+export class CarouselComponent{images: string[] = ["cerise.jpg", "pomme.jpg", "kiwi.jpg"];
+loadedImage: string = "";
+interval: any;
 
-  photoSrc = "" ;
+constructor() { }
 
-  photos:string[] = [
-    "https://ae01.alicdn.com/kf/HTB1IfHrQFXXXXcgaXXXq6xXFXXXV/tui-de-compteur-arri-re-pour-Yamaha-FZ6-FZ6N-2007-08-09-2010-FZ1-FZ1N.jpg",
-    "https://lh3.googleusercontent.com/proxy/ijTsAbf6nAfT7LfzQ3SfOUIZy3fUV7Tjupl2iUxGbs3mUudd_Vf-dP5NN-y-XeOPvJ5qQpBzypm9s2-WBvlHGEqVC44XpEHEHa0D-PS4yBR8DSlItlErhShEHlor_pcyt1IbPNUjoxnXDRQ3T3k",
-    "https://www.ledperf.com/images/models/ledperf.com/2642_yamaha-mt-07-2018-2018.jpg",
-    "https://www.audemar.com/18026-large_default/mt-09.jpg"
-  ];
+ngOnInit(): void {
+  this.startCarousel();
+}
 
-  constructor() { 
-    this.carousel()
-  }
+startCarousel() {
+  let i: number = 0;
+  this.interval = setInterval(() => {
+    if (i >= this.images.length) i = 0; // reset de i
+    this.loadedImage = FRUITS_DIR + this.images[i];
+    i++;
+  }, SPEED) 
+}
 
-  carousel(){
-   this.photos.forEach((element,i) => {    
-    setTimeout(() => {
-      this.photoSrc = element;
-    }, i * 1*5000);      
-   });     
-  }
-    
-    
- 
+stopCarousel() {
+  clearInterval(this.interval);
+}
 
-
-
-  
 }

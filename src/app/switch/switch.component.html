@@ -1,10 +1,4 @@
-<div *ngIf="status; else elseBlock" class="button" [ngStyle]="{'background-color': backgroundColor}">
-    <div>{{textStatus}}</div>
-    <label (click)="changeStatus()"></label>
+<div (click)="onClick()" class="switch" [ngClass]="{'off': isOff}">
+    <span [ngStyle]="{'margin-left': marginLeft}">{{ text }}</span>
+    <div [ngStyle]="{'left': left}" class="circle"></div>
 </div>
-<ng-template #elseBlock>
-    <div class="button" [ngStyle]="{'background-color': backgroundColor}">
-        <label (click)="changeStatus()"></label>
-        <div>{{textStatus}}</div>        
-    </div>
-</ng-template>
