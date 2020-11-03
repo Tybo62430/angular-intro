@@ -1,0 +1,17 @@
+<div class="title">
+    <h2>Juventus Home Authentic Jersey 2020/21</h2>
+</div>
+
+<div>
+    <h2>Flocking</h2>
+    <div>
+        <button (click)="seePlayers = false">NO FLOCK</button>
+        <button (click)="seePlayers = true">PLAYERS</button>
+    </div>
+    <div class="players" *ngIf="seePlayers">
+        <select>
+            <option *ngFor="let player of players">{{player.number}} - {{player.lastname}}</option>
+        </select>
+    </div>
+    
+</div>

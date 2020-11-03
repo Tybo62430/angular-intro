@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { SwitchComponent } from './switch/switch.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { FlockComponent } from './flock/flock.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     HeaderComponent,
     SwitchComponent,
     CarouselComponent,
-    GalleryComponent
+    GalleryComponent,
+    FlockComponent
   ],
   imports: [
     BrowserModule
