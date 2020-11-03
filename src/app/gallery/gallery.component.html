@@ -1,0 +1,10 @@
+<div>
+    <img class="mainImage" [src]="previewImage">
+</div>
+
+<div class="container">
+    <div class="gallery" *ngFor=" let image of images">
+        <img (click)="changePreviewImage(image)" class="thumbnail" [src]="image">     
+    </div>
+</div>
+
