@@ -15,8 +15,6 @@ export class PlayerListComponent implements OnInit {
 
   ngOnInit(): void { 
     this.listPlayers = this.playerService.getPlayer()
-
-    console.log(this.listPlayers)
   }
 
 }

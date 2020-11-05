@@ -1,1 +1,19 @@
-<app-player-list></app-player-list>
+<h1>Player Manager</h1>
+<div class="container">
+
+    <div>
+
+        <div class="filter">
+            <app-filter [optionName]="equipe"></app-filter>
+            <app-filter [optionName]="poste"></app-filter>
+        </div>  
+
+        <app-player-list></app-player-list>
+
+    </div>
+    
+    <div>
+        <app-player-form></app-player-form>
+    </div>
+
+</div>

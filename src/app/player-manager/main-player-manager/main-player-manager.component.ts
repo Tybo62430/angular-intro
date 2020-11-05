@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPlayerManagerComponent implements OnInit {
 
+   equipe:string = 'Recherche par equipe'
+   poste:string = 'Recherche par poste'
+
   constructor() { }
 
   ngOnInit(): void {
