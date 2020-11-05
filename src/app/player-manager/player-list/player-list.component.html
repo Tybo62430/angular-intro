@@ -1,0 +1,25 @@
+<div>
+    <h1>Listes des Joueurs :</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Age</th>
+                <th>Poste</th>
+                <th>Equipe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of listPlayers">
+                <td>{{player.lastname}}</td>
+                <td>{{player.firstname}}</td>   
+                <td>{{player.age}}</td>                   
+                <td>{{player.position}}</td>   
+                <td>{{player.teamid}}</td>   
+                <td><button>Editer</button></td>  
+                <td><button>Supprimer</button></td>  
+            </tr>
+        </tbody>
+    </table>
+</div>
