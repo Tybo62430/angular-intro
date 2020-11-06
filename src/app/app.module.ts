@@ -14,7 +14,9 @@ import { PlayerComponent } from './player/player.component';
 import { PlayersComponent } from './players/players.component';
 import { PlayerFormComponent } from './player-form/player-form.component';
 import { AjaxComponent } from './ajax/ajax.component';
-import {PlayerManagerModule} from './player-manager/player-manager.module'
+
+import { PlayerManagerModule } from './player-manager/player-manager.module';
+import { CantiUsersModule } from './canti-users/canti-users.module';
 
 @NgModule({
   declarations: [
@@ -28,15 +30,16 @@ import {PlayerManagerModule} from './player-manager/player-manager.module'
     PlayerComponent,
     PlayersComponent,
     PlayerFormComponent,
-    AjaxComponent
+    AjaxComponent,
   ],
   imports: [
     BrowserModule,
     PlayerManagerModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CantiUsersModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

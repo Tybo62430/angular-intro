@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Liste des Utilisateurs</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Porte feuille</th>
+        <th>Editer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.firstname}}</td>
+        <td>{{user.wallet}}</td>
+        <td>
+          <button>Editer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

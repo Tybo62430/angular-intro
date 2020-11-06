@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+h1,td{
+    text-align: center;
+}
